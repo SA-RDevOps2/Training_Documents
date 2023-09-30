@@ -379,29 +379,25 @@ Day - 1 - 30th Sep. 2023
 
 				2. AWS Cloud Platform 
 					Create AWS Free-Tier Account
+							https://aws.amazon.com/console/
+							
+						- Valid Email_ID 
+						- Valid Mobile Number 
+						- Valid Credit Card/Debit Card - enabled for International Transaction 
+							
 					Create Virtual Machines/EC2 Instances
 					
 				3. Install SSH Client in local Machine.
 					All Windows user can download and install MobaXterm - SSH Client 
+							https://mobaxterm.mobatek.net/download.html
 				
 				4. Visual Studio Code - IDEs 
+							https://code.visualstudio.com/download
 				
 				5. Create Account in DockerHub.
+							https://hub.docker.com/
 				
 				
 					
-						
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
-				
+		Github ==> Is a remote repository ==> files and folders. 
 				
