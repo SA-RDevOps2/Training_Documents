@@ -6,7 +6,7 @@ Duration : 30th Sep. 2023 to 29th Oct.2023
 
 Start Date: 30th Sep. 2023
 
-9:30AM - 1:30AM (SAT&SUN)
+9:30AM - 1:30PM IST (SAT&SUN)
 
 *************************
 Day - 1 - 30th Sep. 2023
@@ -219,7 +219,7 @@ Day - 1 - 30th Sep. 2023
 							Notify the Testing to pick up the application for further testing 
 							
 						DevOps Approach:
-							Developers create the code & publish the latest src_code to Source Code Repository
+							Developers create the code & publish the latest src_code to GIT
 							
 							Using DevOps Automation:	
 								Build - Compile the source code & Create artifacts (Binaries - *.war)
@@ -401,3 +401,348 @@ Day - 1 - 30th Sep. 2023
 					
 		Github ==> Is a remote repository ==> files and folders. 
 				
+				
+*************************
+Day - 2 - 1st Oct. 2023
+*************************				
+				
+		Version Control System using GIT :::::
+			
+		Developer --> Java Web Application ::::
+		
+			Project_folder 
+				src/main/java 					signin.java/index.jsp
+				src/main/test 
+				application.properties
+				targets
+			
+			index.html ::
+			
+			<html>
+			-~~~
+			~~--
+			--~~~-
+			---
+			---```
+			``
+			`````
+			```
+			---~~~~
+			```
+			```
+			```
+			</html>
+			
+			Version Control System :::
+			
+				Is used to version control the changes 
+				Is used to track the Changes.
+				
+			index.html_v1.0	
+			index.html_v1.1
+			index.html_v1.2
+			index.html_v1.3
+			index.html_v1.4
+			
+			Types of VCS :::
+			
+				- Local Version Control System
+				
+				- Centralized Version Control System 
+				
+				- Distributed Version Control System 
+				
+			
+			GIT :
+				It is a open source Distributed Version Control System.
+				It is used to Version Control the changes 
+				It is used to Track the Changes 
+				It is used to perform parallel Development.
+				
+			
+				
+			GITHUB 			==> Remote git repository 
+			Azure Repos
+			AWS Code Commit 
+			Bitbucket 
+			GitLab
+						
+			GIT Cli in the Local Machine.
+						
+			Local Machine 									=====>							Remote Server 
+			
+			Git file workflow :::
+			
+
+		
+			Project_folder 
+				src/main/java 					signin.java/index.jsp
+				src/main/test 
+				application.properties
+				targets			
+			
+			Local Machine :::
+			GIT Cli in the Local Machine.	
+			
+			Local Machine 												=====>						Remote Server 
+			Working_Directory	--->		Index/Staging_Area	---> 	Local_Repository	--->      Remote Repository			
+			index.jsp			git add 		index.jsp	git commit 	index.jsp_v1.0		git push 	index.jsp_v1.0
+					
+Git file workflow :::
+
+Developer's Workload ::
+
+New Project 
+Enhancement/bugfix 
+
+		git clone 	==>		It is used to copy/clone the entire remote repository to local machine.
+		
+		git add		==>		It is used to add the changes from working directory to staging area.
+		
+		git commit 	==>		It is used to commit the changes from staging area to local repository.
+		
+		git push	==>		It is used to push the changes from local repository to remote repository.
+		
+		
+		git fetch/pull
+					==>		Both git fetch and git pull are used to handle the incremental changes form remote repository.
+							
+							git fetch ==> It is just to check for the incremental changes in remote repository, if there is any incremental changes available in remote repository, it will be fetched in to the local repository. NOT into the work directory.
+							
+							git pull ==> It is used check for the incremental changes in remote repository, if there is any incremental changes available in remote repository, it will be update the changes in both local repository as well as in work directory.
+							
+		fork 		==> 	It is used to copy one remote repository to another remote repository.
+		
+		
+
+			Install GIT Cli in Local Machine :::
+				https://git-scm.com/downloads
+				
+				
+			Maintain the Repository Structure ::::
+
+
+				e:
+				
+				mkdir saOct23
+				
+				cd saOct23
+				
+				mkdir repo1
+				
+				cd repo1
+				
+				e:/saOct23/repo1				
+				e:/saOct23/repo2
+				e:/saOct23/repo3
+				
+			
+
+		Developer's Workload ::
+
+		New Project 
+		Enhancement/bugfix 				
+			
+			
+			
+			git init	==> It is used to initialize empty git repository.
+							It create .git directory and the default branch called 'master'
+							
+		
+			git status	==> It is used to get the status of git repository.
+
+			Local Machine 												=====>						Remote Server 
+			Working_Directory	--->		Index/Staging_Area	---> 	Local_Repository	--->      Remote Repository			
+				file1.txt
+				
+				
+			For you level ::
+			
+			git init 
+			
+			Configure GIT for Author Name and Email ID.
+			
+			git config ::			# should be done before the very initial Commit.
+
+				Global Configuration		# This is applicable for all the repositories in local Machine.
+				
+					git config --global user.name "Loksai"
+					git config --global user.email "loksai@asdf.com"
+					
+				Local Configuration			# This is applicable within the a specific repository in local Machine.
+				
+					git config user.name "Loksai"
+					git config user.email "loksai@asdf.com"	
+
+			
+			git add 
+			
+				git add <file_name>
+				
+				git add <file1_name> <file2_name>
+				
+				git add *.java
+				
+				git add .							# this will add all the files/changes to staging area. 
+			
+			git log
+				
+				git log
+				git log --oneline
+				git log --stat
+				git log -3 
+				git log --oneline -3 
+				git log --stat -3 
+				
+			git show <commit>
+			
+			git diff				# Used to compare the changes between working dir & Local Repo.
+			
+			To remove the changes from staging area ::
+			
+				git rm --cached <file_name>			
+								# This will remove the changes from staging area and take the changes back to working dir.
+				
+				git rm -f <file_name> 
+								# This will permanently remove the changes from staging area and working dir.
+				
+			
+			GIT IGNORE ::::
+			
+			
+				Project_folder 
+					src/main/java 					signin.java/index.jsp
+					src/main/test 
+					application.properties
+					mysqldb_secrets
+					test_credentials
+					targets	
+						*.war 
+						*.war
+					*.class
+					pom.xml
+					
+					
+				Git Ignore 	==> Is used to ignore the files from tracking.
+				
+				Create .gitignore file in repo. This should be the initial commit in the repo.
+				
+				*.war 
+				*.class 
+				sample1.txt
+				sample.doc 
+				targets/
+				mysqldb_secrets
+				test_credentials			
+				
+			
+			git reset :::
+			
+				- It is used to undo the changes 
+				- HEAD Pointer will be pointing to the specific commit point.
+				- It will never create any new commit point.
+				- git reset is not recommended in the shared repositories.
+				
+				
+				git reset --soft <commit_id>
+				
+						==> It remove the changes from local repo.
+							The changes will be back to staging area.
+							The changes will be available in working dir. as well.
+							HEAD Pointer will be pointing to the specific commit point.
+				
+				git reset --mixed <commit_id>			*** Is the default option.
+
+						==> It remove the changes from local repo.
+							The changes will NOT be taken back to staging area.
+							But, the changes will be available in working dir.
+							HEAD Pointer will be pointing to the specific commit point.
+				
+				git reset --hard <commit_id>
+
+						==> It remove the changes from local repo.
+							The changes will NOT be taken back to staging area.
+							The changes will be permanently removed from working dir.
+							HEAD Pointer will be pointing to the specific commit point.
+			
+			
+			
+			git revert :::	
+
+				- It is used to undo the specific commit point. 
+				- It will create a new commit point for tracking the changes.
+				- git reset is recommended in the shared repositories.
+				- git revert is similar to git reset. only difference is, revert will create a new commit point for tracking.
+				
+			
+				git revert <specific commit_id>
+				
+			
+			commit --> -m "CR2310 - Updated payment module"
+			
+		GIT Branching ::::
+				- Git enable parallel Development ::::
+				
+				
+			Repository :
+					index.html 
+					
+			Repository :::
+
+				master 		==> cm1,cm2,cm3 			# considered as production version of source code.
+				
+					feature1 ==> cm1,cm2,cm3
+					
+
+
+		GIT Branching Strategies ::::
+							
+Scenario1 :::
+
+				master 		==> cm1,cm2,cm3 			# considered as production version of source code.				
+					feature1 ==> cm1,cm2,cm3
+
+Scenario2 :::
+
+				master 		==> cm1,cm2,cm3 			# considered as production version of source code.
+
+					Developer1_Branch ==> cm1,cm2,cm3
+						feature1 ==> cm1,cm2,cm3
+						feature2 ==> cm1,cm2,cm3
+						
+Scenario3 :::
+
+				master 		==> cm1,cm2,cm3 			# considered as production version of source code.
+
+					Integration_Branch ==> cm1,cm2,cm3,Dev1-features,Dev2-features
+						Developer1_Branch ==> cm1,cm2,cm3,feature1,feature2
+							feature1 ==> cm1,cm2,cm3
+							feature2 ==> cm1,cm2,cm3
+							
+						Developer2_Branch ==> cm1,cm2,cm3,feature1,feature2
+							feature1 ==> cm1,cm2,cm3
+							feature2 ==> cm1,cm2,cm3
+							
+						
+Scenario4 :::
+
+				master 		==> cm1,cm2,cm3,cm4 			# considered as production version of source code.
+
+					Release_Branch ==> cm1,cm2,cm3,Team1_Changes,Team2_Changes 
+						Integration_Branch ==> cm1,cm2,cm3,Dev1-features,Dev2-features			Team1
+							Developer1_Branch ==> cm1,cm2,cm3,feature1,feature2
+								feature1 ==> cm1,cm2,cm3
+								feature2 ==> cm1,cm2,cm3
+								
+							Developer2_Branch ==> cm1,cm2,cm3,feature1,feature2
+								feature1 ==> cm1,cm2,cm3
+								feature2 ==> cm1,cm2,cm3
+								
+						Integration_Branch ==> cm1,cm2,cm3,Dev1-features,Dev2-features			Team2
+							Developer1_Branch ==> cm1,cm2,cm3,feature1,feature2
+								feature1 ==> cm1,cm2,cm3
+								feature2 ==> cm1,cm2,cm3
+								
+							Developer2_Branch ==> cm1,cm2,cm3,feature1,feature2
+								feature1 ==> cm1,cm2,cm3
+								feature2 ==> cm1,cm2,cm3
