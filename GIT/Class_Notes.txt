@@ -1,0 +1,748 @@
+DevOps Training :
+
+Duration : 30th Sep. 2023 to 29th Oct.2023
+10 Days - 40 Hours
+40hours of DevOps Crash Course ::
+
+Start Date: 30th Sep. 2023
+
+9:30AM - 1:30PM IST (SAT&SUN)
+
+*************************
+Day - 1 - 30th Sep. 2023
+*************************
+
+			Introduction to DevOps!!!
+			
+				GIT,Jenkins,Build_Tools,Docker,Kubernetes,Ansible,Terraform,Prometheus&Grafana
+				
+				Scripting Languages : shell scripting, groovy scripting, yaml scripting --> python scripting
+				
+			Introduction to DevOps...!!!
+			
+			What is DevOps ?
+			
+			Software ?
+			
+				Application Software ::
+				
+				System Software ::
+			
+				Application - collection of programs
+			
+			Types of Software ?
+			
+				Destops Application Software 
+				Web Application 
+				Mobile Application
+			
+			Online _ Applications ::
+				E_Commerce Application protals 
+					www.amazon.com
+					
+			I want to create a E_Learning Portal ::: 
+			
+			SDLC - Software Development Life Cycle 
+			
+				Require Analysis 
+				Design
+				Coding/Development
+				Testing
+				Implementation/Production Release 
+				Maintainence/Monitor
+				
+				Water-fall Model ::: 	Using this water fall model we can achieve this:
+										It is linear in fashion
+										We can go back and revise the plan/design.
+										Water-fall Model cannot accommodate the new changes in mid of the project.
+										If any new changes comes in, it should be considered as a new project.
+						
+				Require Analysis 
+				Design
+				Coding/Development
+				Testing
+				Implementation/Production Release 
+				Maintainence/Monitor
+
+					To create a E_Learning Portal ::: 	
+					
+					Core_Project 
+						Require Analysis 				6 - 9 months to complete the product.
+						Design
+						Coding/Development
+						Testing
+						Implementation/Production Release 
+						Maintainence/Monitor			
+					
+					Core_Project_v1 
+						Require Analysis 				1-2 months to complete the product_v1.
+						Design
+						Coding/Development
+						Testing
+						Implementation/Production Release 
+						Maintainence/Monitor	
+
+			
+				AGILE Methodologies :::
+
+					Split the whole application into various Modules/Iterations :
+					
+						User_Registration
+						User_login 
+						User_Search_Courses
+						User_Register_Course 
+						User_Payment
+						User_Track
+				
+					Iteration 1 : User_Registration
+					
+						Require Analysis 
+						Design
+						Coding/Development
+						Testing
+						Implementation/Production Release 
+						Maintainence/Monitor				
+				
+				
+					Iteration 2 : User_Login
+					
+						Require Analysis 
+						Design
+						Coding/Development
+						Testing
+						Implementation/Production Release 
+						Maintainence/Monitor					
+			
+			
+					Iteration 3 : New_CR
+					
+						Require Analysis 
+						Design
+						Coding/Development
+						Testing
+						Implementation/Production Release 
+						Maintainence/Monitor	
+
+				Using AGILE we can achieve ::
+				
+					Continuous Development
+					Continuous Integration
+					Continuous Testing
+					Continuous Delivery 
+					
+				Using AGILE, we can achieve Continuous Delivery. But, NOT Continuous Deployment.
+				
+					Continuous Delivery 	--> Need Manual approval for any production release.
+					
+					Continuous Deployment 	--> This doesnt required any manual approval to production release.
+					
+					
+				DevOps :::
+				
+					Is a Software Development Strategy, which helps to promote the collaboration between the teams like Development Teams and Operations Teams to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring in an automated fashion.
+					
+				
+					Based upon the Application Architecture:
+					
+						Monolith Application Architecture :::
+							It is a tightly couple Application Architecture.
+							
+							Eg.:
+								Billing System ::
+								
+									Create User Interface 
+									Application Logic to validate the user inputs 
+									Application Logic to Compute the inputs 
+									Application Logic to save the trasaction to a dbase 
+									Application Logic to generate the report
+									
+								
+						Micro-Service based Application Architecture :::
+							It is loosely coupled Application Architecture.
+							Here the deployment is not at the application level
+							It is at the service level.
+							This allows to the independent development, testing and deployment of application to production.
+							
+							The whole application into various Modules/Iterations/micro-service :
+							
+							Eg.: 
+								www.amazon.com :::
+								
+									Sign-Up			Micro-Service1 - Developer1 - Independently code, test, and deploy to production
+									Sign_In
+									Search 
+									Add_to_Cart
+									Payment
+									Place_Order 
+									Tracking
+									
+							3-tier Application Architecture
+										Front_End 
+										Application_logic 
+										Back_End(Dbase)
+										
+										
+						Application :: 
+						
+							Cloud 
+							On-Premises
+							Hybrid Environment ( Cloud & On-Premises)
+							
+				DevOps :::
+				
+					Is a Software Development Strategy, which helps to promote the collaboration between the teams like Development Teams and Operations Teams to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring in an automated fashion.
+					
+				Teams ::::
+		
+				
+					DevOps_Team :
+					
+						Infra-Structure Management Team
+						Application Development Team 			==> java_application.
+						Testing Team 							==> java_application.
+						Release Management Team 
+						Production Support Team
+						Production Monitoring Team
+						Security Team
+				
+				DevOps Stages ::::
+				
+					Continuous Development :
+					
+						Developer ::: Roles & Responsibilities :: Java Web Application Development 
+						
+						Tradional Approach:
+							Code the Application
+							Build - Compile the source code & Create artifacts (Binaries - *.war)
+							Unit Test 
+							Promote the code to higher environment - QA Testing
+							Notify the Testing to pick up the application for further testing 
+							
+						DevOps Approach:
+							Developers create the code & publish the latest src_code to GIT
+							
+							Using DevOps Automation:	
+								Build - Compile the source code & Create artifacts (Binaries - *.war)
+								Unit Test 
+								Promote the code to higher environment - QA Testing
+								Notify the Testing to pick up the application for further testing 
+								
+						Tools :
+							IDEs - Eclipse based IDEs / Visual Studio Code / Visual Studio / Pycharm
+							GIT 
+							Jenkins 
+						
+					Continuous Integration :
+							It is a capability of the team to continuously integrate the code for further testing without relying on other.
+
+						
+							Sign-Up			Micro-Service1 - Developer1 - Independently code, test, and deploy to production
+							Sign_In
+							Search 
+							Add_to_Cart
+							Payment
+							Place_Order 
+							Tracking
+					
+						Tools :
+						
+							Jenkins,Ansible,Docker,Kubernetes
+					
+					Continuous Testing 
+							Implement continuous testing 
+							
+						Tools : 
+							Jenkins,TestNG,Junit,Selenium
+							
+						
+					Continuous Delivery / Continuous Deployment :
+					
+						Continuous Delivery and Continuous Deployment are used for production release.
+								Continuous Delivery 	--> Need Manual approval for any production release.
+								
+								Continuous Deployment 	--> This doesnt required any manual approval to production release.						
+						
+						Tools :						
+							Jenkins,Ansible,Docker,Kubernetes						
+					
+					Continuous Monitoring ::::
+					
+						Monitoring :::
+						
+							www.amazon.com	
+							
+							Infra-Structure Monitoring :::
+									
+										Network
+										
+										Traffic 
+										
+										CPU Utilization 
+										
+										Memory Utilization 
+										
+									80% 
+						Tools : Prometheus&Grafana,Splunk, Datadog, Dynatrace, Nagios
+						Jenkins									
+							
+							Application Monitoring :: AppDynamics
+							
+				
+
+				
+				Tools ::::
+					
+					- Open Source Tools 
+							GIT,Jenkins,Build_Tools,Docker,Kubernetes,Ansible,Terraform,Prometheus&Grafana
+							
+					- Managed Services
+					
+						AWS 		DevOps Tools -> AWS Code commit, pipeline, build
+						Azure 
+						GCP
+							
+							
+				Infra-Structure Team ::
+				
+					Provision the Infra-Structure & Configure the Servers 
+					IAC Tools :
+						Terraform 	- Server Provisioning 
+						Ansible 	- Configuration Management
+					
+				
+				DevOps Workflow / LifeCycle :::
+				
+				CI/CD Pipeline / Lifecycle :::
+				
+					Continuous Deployment can be achieved only using the matured level of DevOps :::
+				
+				Production Deployment Window ::: --> For (4 to 6 Hrs.)
+				
+				Appln_v1.5
+				Appln_v1.6			==> New Version 
+				
+					Banking/Financial
+					
+					On_line Banking Service / Credit Transaction...........
+					
+						Production Testing ==> 
+					
+							- Try to fix that issue.
+							- Rollback/Revert
+
+					Continuous Delivery Process of Production Release.
+					
+					
+					E_Commerce - amazon
+					facebook
+					google
+					netflix 
+					
+					
+					Continuous Deployment 
+					
+					DevOps Strategy / Process
+				DevOps :::
+				
+					Is a Software Development Strategy, which helps to promote the collaboration between the teams like Development Teams and Operations Teams to achieve Continuous Development, Continuous Integration, Continuous Testing, Continuous Delivery, Continuous Deployment and Continuous Monitoring in an automated fashion.
+
+					
+						DevOps is all about ::
+						
+								People
+								Process 
+								Tools 
+
+						
+				DevOps Team :::
+
+					DevOps Consultant/Architect/Lead 
+					
+					DevOps Associate / Sr. Associate
+					DevOps Engineer / Sr. Engineer 
+					DevOps Lead / Sr. Lead
+					
+				Water-fall / Agile / DevOps / DevSecOps / SRE / GITOps / AIOps/ MLOps
+				
+				
+			
+			Next working with DevOps Tools :
+			
+				GIT,Jenkins,Build_Tools,Docker,Kubernetes,Ansible,Terraform,Prometheus&Grafana
+				
+				GIT :::::
+				
+				
+			Lab Environment ::::
+			
+				1. Create GITHUB Account - https://github.com/
+
+				2. AWS Cloud Platform 
+					Create AWS Free-Tier Account
+							https://aws.amazon.com/console/
+							
+						- Valid Email_ID 
+						- Valid Mobile Number 
+						- Valid Credit Card/Debit Card - enabled for International Transaction 
+							
+					Create Virtual Machines/EC2 Instances
+					
+				3. Install SSH Client in local Machine.
+					All Windows user can download and install MobaXterm - SSH Client 
+							https://mobaxterm.mobatek.net/download.html
+				
+				4. Visual Studio Code - IDEs 
+							https://code.visualstudio.com/download
+				
+				5. Create Account in DockerHub.
+							https://hub.docker.com/
+				
+				
+					
+		Github ==> Is a remote repository ==> files and folders. 
+				
+				
+*************************
+Day - 2 - 1st Oct. 2023
+*************************				
+				
+		Version Control System using GIT :::::
+			
+		Developer --> Java Web Application ::::
+		
+			Project_folder 
+				src/main/java 					signin.java/index.jsp
+				src/main/test 
+				application.properties
+				targets
+			
+			index.html ::
+			
+			<html>
+			-~~~
+			~~--
+			--~~~-
+			---
+			---```
+			``
+			`````
+			```
+			---~~~~
+			```
+			```
+			```
+			</html>
+			
+			Version Control System :::
+			
+				Is used to version control the changes 
+				Is used to track the Changes.
+				
+			index.html_v1.0	
+			index.html_v1.1
+			index.html_v1.2
+			index.html_v1.3
+			index.html_v1.4
+			
+			Types of VCS :::
+			
+				- Local Version Control System
+				
+				- Centralized Version Control System 
+				
+				- Distributed Version Control System 
+				
+			
+			GIT :
+				It is a open source Distributed Version Control System.
+				It is used to Version Control the changes 
+				It is used to Track the Changes 
+				It is used to perform parallel Development.
+				
+			
+				
+			GITHUB 			==> Remote git repository 
+			Azure Repos
+			AWS Code Commit 
+			Bitbucket 
+			GitLab
+						
+			GIT Cli in the Local Machine.
+						
+			Local Machine 									=====>							Remote Server 
+			
+			Git file workflow :::
+			
+
+		
+			Project_folder 
+				src/main/java 					signin.java/index.jsp
+				src/main/test 
+				application.properties
+				targets			
+			
+			Local Machine :::
+			GIT Cli in the Local Machine.	
+			
+			Local Machine 												=====>						Remote Server 
+			Working_Directory	--->		Index/Staging_Area	---> 	Local_Repository	--->      Remote Repository			
+			index.jsp			git add 		index.jsp	git commit 	index.jsp_v1.0		git push 	index.jsp_v1.0
+					
+Git file workflow :::
+
+Developer's Workload ::
+
+New Project 
+Enhancement/bugfix 
+
+		git clone 	==>		It is used to copy/clone the entire remote repository to local machine.
+		
+		git add		==>		It is used to add the changes from working directory to staging area.
+		
+		git commit 	==>		It is used to commit the changes from staging area to local repository.
+		
+		git push	==>		It is used to push the changes from local repository to remote repository.
+		
+		
+		git fetch/pull
+					==>		Both git fetch and git pull are used to handle the incremental changes form remote repository.
+							
+							git fetch ==> It is just to check for the incremental changes in remote repository, if there is any incremental changes available in remote repository, it will be fetched in to the local repository. NOT into the work directory.
+							
+							git pull ==> It is used check for the incremental changes in remote repository, if there is any incremental changes available in remote repository, it will be update the changes in both local repository as well as in work directory.
+							
+		fork 		==> 	It is used to copy one remote repository to another remote repository.
+		
+		
+
+			Install GIT Cli in Local Machine :::
+				https://git-scm.com/downloads
+				
+				
+			Maintain the Repository Structure ::::
+
+
+				e:
+				
+				mkdir saOct23
+				
+				cd saOct23
+				
+				mkdir repo1
+				
+				cd repo1
+				
+				e:/saOct23/repo1				
+				e:/saOct23/repo2
+				e:/saOct23/repo3
+				
+			
+
+		Developer's Workload ::
+
+		New Project 
+		Enhancement/bugfix 				
+			
+			
+			
+			git init	==> It is used to initialize empty git repository.
+							It create .git directory and the default branch called 'master'
+							
+		
+			git status	==> It is used to get the status of git repository.
+
+			Local Machine 												=====>						Remote Server 
+			Working_Directory	--->		Index/Staging_Area	---> 	Local_Repository	--->      Remote Repository			
+				file1.txt
+				
+				
+			For you level ::
+			
+			git init 
+			
+			Configure GIT for Author Name and Email ID.
+			
+			git config ::			# should be done before the very initial Commit.
+
+				Global Configuration		# This is applicable for all the repositories in local Machine.
+				
+					git config --global user.name "Loksai"
+					git config --global user.email "loksai@asdf.com"
+					
+				Local Configuration			# This is applicable within the a specific repository in local Machine.
+				
+					git config user.name "Loksai"
+					git config user.email "loksai@asdf.com"	
+
+			
+			git add 
+			
+				git add <file_name>
+				
+				git add <file1_name> <file2_name>
+				
+				git add *.java
+				
+				git add .							# this will add all the files/changes to staging area. 
+			
+			git log
+				
+				git log
+				git log --oneline
+				git log --stat
+				git log -3 
+				git log --oneline -3 
+				git log --stat -3 
+				
+			git show <commit>
+			
+			git diff				# Used to compare the changes between working dir & Local Repo.
+			
+			To remove the changes from staging area ::
+			
+				git rm --cached <file_name>			
+								# This will remove the changes from staging area and take the changes back to working dir.
+				
+				git rm -f <file_name> 
+								# This will permanently remove the changes from staging area and working dir.
+				
+			
+			GIT IGNORE ::::
+			
+			
+				Project_folder 
+					src/main/java 					signin.java/index.jsp
+					src/main/test 
+					application.properties
+					mysqldb_secrets
+					test_credentials
+					targets	
+						*.war 
+						*.war
+					*.class
+					pom.xml
+					
+					
+				Git Ignore 	==> Is used to ignore the files from tracking.
+				
+				Create .gitignore file in repo. This should be the initial commit in the repo.
+				
+				*.war 
+				*.class 
+				sample1.txt
+				sample.doc 
+				targets/
+				mysqldb_secrets
+				test_credentials			
+				
+			
+			git reset :::
+			
+				- It is used to undo the changes 
+				- HEAD Pointer will be pointing to the specific commit point.
+				- It will never create any new commit point.
+				- git reset is not recommended in the shared repositories.
+				
+				
+				git reset --soft <commit_id>
+				
+						==> It remove the changes from local repo.
+							The changes will be back to staging area.
+							The changes will be available in working dir. as well.
+							HEAD Pointer will be pointing to the specific commit point.
+				
+				git reset --mixed <commit_id>			*** Is the default option.
+
+						==> It remove the changes from local repo.
+							The changes will NOT be taken back to staging area.
+							But, the changes will be available in working dir.
+							HEAD Pointer will be pointing to the specific commit point.
+				
+				git reset --hard <commit_id>
+
+						==> It remove the changes from local repo.
+							The changes will NOT be taken back to staging area.
+							The changes will be permanently removed from working dir.
+							HEAD Pointer will be pointing to the specific commit point.
+			
+			
+			
+			git revert :::	
+
+				- It is used to undo the specific commit point. 
+				- It will create a new commit point for tracking the changes.
+				- git reset is recommended in the shared repositories.
+				- git revert is similar to git reset. only difference is, revert will create a new commit point for tracking.
+				
+			
+				git revert <specific commit_id>
+				
+			
+			commit --> -m "CR2310 - Updated payment module"
+			
+		GIT Branching ::::
+				- Git enable parallel Development ::::
+				
+				
+			Repository :
+					index.html 
+					
+			Repository :::
+
+				master 		==> cm1,cm2,cm3 			# considered as production version of source code.
+				
+					feature1 ==> cm1,cm2,cm3
+					
+
+
+		GIT Branching Strategies ::::
+							
+Scenario1 :::
+
+				master 		==> cm1,cm2,cm3 			# considered as production version of source code.				
+					feature1 ==> cm1,cm2,cm3
+
+Scenario2 :::
+
+				master 		==> cm1,cm2,cm3 			# considered as production version of source code.
+
+					Developer1_Branch ==> cm1,cm2,cm3
+						feature1 ==> cm1,cm2,cm3
+						feature2 ==> cm1,cm2,cm3
+						
+Scenario3 :::
+
+				master 		==> cm1,cm2,cm3 			# considered as production version of source code.
+
+					Integration_Branch ==> cm1,cm2,cm3,Dev1-features,Dev2-features
+						Developer1_Branch ==> cm1,cm2,cm3,feature1,feature2
+							feature1 ==> cm1,cm2,cm3
+							feature2 ==> cm1,cm2,cm3
+							
+						Developer2_Branch ==> cm1,cm2,cm3,feature1,feature2
+							feature1 ==> cm1,cm2,cm3
+							feature2 ==> cm1,cm2,cm3
+							
+						
+Scenario4 :::
+
+				master 		==> cm1,cm2,cm3,cm4 			# considered as production version of source code.
+
+					Release_Branch ==> cm1,cm2,cm3,Team1_Changes,Team2_Changes 
+						Integration_Branch ==> cm1,cm2,cm3,Dev1-features,Dev2-features			Team1
+							Developer1_Branch ==> cm1,cm2,cm3,feature1,feature2
+								feature1 ==> cm1,cm2,cm3
+								feature2 ==> cm1,cm2,cm3
+								
+							Developer2_Branch ==> cm1,cm2,cm3,feature1,feature2
+								feature1 ==> cm1,cm2,cm3
+								feature2 ==> cm1,cm2,cm3
+								
+						Integration_Branch ==> cm1,cm2,cm3,Dev1-features,Dev2-features			Team2
+							Developer1_Branch ==> cm1,cm2,cm3,feature1,feature2
+								feature1 ==> cm1,cm2,cm3
+								feature2 ==> cm1,cm2,cm3
+								
+							Developer2_Branch ==> cm1,cm2,cm3,feature1,feature2
+								feature1 ==> cm1,cm2,cm3
+								feature2 ==> cm1,cm2,cm3
