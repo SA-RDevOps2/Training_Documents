@@ -746,3 +746,319 @@ Scenario4 :::
 							Developer2_Branch ==> cm1,cm2,cm3,feature1,feature2
 								feature1 ==> cm1,cm2,cm3
 								feature2 ==> cm1,cm2,cm3
+  502  cd e:
+  503  mkdir SA-DevOps-Oct23
+  504  cd SA-DevOps-Oct23/
+  505  pwd
+  506  mkdir samplerepo1
+  507  clear
+  508  ls
+  509  cd samplerepo1/
+  510  clear
+  511  ls
+  512  pwd
+  513  git init
+  514  clear
+  515  ls
+  516  ls -a
+  517  ls
+  518  ls -a
+  519  cd .git/
+  520  ls
+  521  cd ..
+  522  pwd
+  523  clea
+  524  clear
+  525  cd ..
+  526  ls
+  527  mkdir samplerepo2
+  528  cd samplerepo2/
+  529  git init
+  530  ls -a
+  531  clear
+  532  ls
+  533  git status
+  534  ls
+  535  echo "Hello"
+  536  echo "Hello" >> file1.txt
+  537  ls
+  538  cat file1.txt
+  539  git status
+  540  git add file1.txt
+  541  git status
+  542  git commit -m "Created file1.txt"
+  543  git status
+  544  git log
+  545  clear
+  546  ls
+  547  git status
+  548  echo "rec1" >> file2.txt
+  549  git status
+  550  git add file2.txt
+  551  git status
+  552  git commit -m "Created file2.txt"
+  553  git log
+  554  clear
+  555  ls
+  556  git log
+  557  git config user.name "Loksai"
+  558  echo "rec1" >> file3.txt
+  559  git add file3.txt
+  560  git commit -m "created file3.txt"
+  561  git log
+  562  cd ..
+  563  ls
+  564  mkdir samplerepo3
+  565  cd samplerepo3/
+  566  git init
+  567  echo "rec1" >> f1.txt
+  568  git add f1.txt
+  569  git commit -m "Created f1.txt"
+  570  git log
+  571  git config --global user.name "Loksai"
+  572  echo "rec1" >> f2.txt
+  573  git add f2.txt
+  574  git commit -m "Created f2.txt"
+  575  git log
+  576  clear
+  577  cd ..
+  578  cd samplerepo1/
+  579  ls
+  580  git status
+  581  clear
+  582  git log
+  583  clear
+  584  echo "Rec1" >> f1.txt
+  585  git add f1.txt
+  586  git commit -m "Created f1.txt"
+  587  ls
+  588  git status
+  589  echo "rec1" >> s1.txt
+  590  git status
+  591  echo "rec1" >> s2.txt
+  592  echo "rec1" >> s3.txt
+  593  echo "rec1" >> q1.java
+  594  echo "rec1" >> q2.java
+  595  echo "rec1" >> l1.html
+  596  echo "rec1" >> l2.html
+  597  echo "rec1" >> readme.md
+  598  echo "rec1" >> readme.doc
+  599  git status
+  600  git add l1.html l2.html
+  601  git status
+  602  git add *.java
+  603  git status
+  604  git add .
+  605  git status
+  606  git log
+  607  git commit -m "Create Project files"
+  608  git log
+  609  echo "rec1" >> w1.txt
+  610  git add .
+  611  git commit -m "created w1.txt"
+  612  echo "rec1" >> w2.txt
+  613  git add .
+  614  git commit -m "created w2.txt"
+  615  echo "rec1" >> w3.txt
+  616  git add .
+  617  git commit -m "created w3.txt"
+  618  clear
+  619  git log
+  620  git log --oneline
+  621  git log --stat
+  622  git log -3
+  623  git log -2
+  624  git log -1
+  625  git log --oneline -3
+  626  git log --stat -2
+  627  clear
+  628  git log --oneline
+  629  git show ed1c8e6
+  630  git show 14d498b
+  631  git log --stat -1
+  632  clear
+  633  ls
+  634  cat readme.
+  635  cat readme.md
+  636  echo "rec2" >> readme.md
+  637  echo "rec3" >> readme.md
+  638  git diff
+  639  git log -4
+  640  git log --oneline
+  641  clear
+  642  git status
+  643  git add .
+  644  git commit -m "updated readme.md"
+  645  clear
+  646  git status
+  647  cd ..
+  648  mkdir samplerepo4
+  649  cd samplerepo4/
+  650  git init
+  651  clear
+  652  echo "rec1" >> f1.txt
+  653  git add .
+  654  git commit -m "Created f1.txt"
+  655  git status
+  656  clear
+  657  ls
+  658  echo "rec1" >> f2.txt
+  659  git status
+  660  git add f2.txt
+  661  git status
+  662  clear
+  663  git status
+  664  ls
+  665  git rm --cached f2.txt
+  666  git status
+  667  git add .
+  668  git statu
+  669  git status
+  670  git rm -f f2.txt
+  671  git status
+  672  ls
+  673  clear
+  674  git status
+  675  echo "rec1" >> q1.txt
+  676  git add .
+  677  git commit -m "created q1.txt"
+  678  echo "rec1" >> q2.txt
+  679  git add .
+  680  git commit -m "created q3.txt"
+  681  echo "rec1" >> q3.txt
+  682  git add .
+  683  git commit -m "created q3.txt"
+  684  clear
+  685  ls
+  686  git status
+  687  echo "rec1" >> w1.txt
+  688  git add .
+  689  echo "rec1" >> w2.txt
+  690  git add .
+  691  clear
+  692  git status
+  693  git commit -m "adfasd"
+  694  clear
+  695  cd ..
+  696  clear
+  697  ls
+  698  mkdir samplerepo5
+  699  cd samplerepo5
+  700  clear
+  701  ls
+  702  git init
+  703  vi .gitignore
+  704  git add .
+  705  git commit -m "Initial Commit for .gitignore file"
+  706  cat .gitignore
+  707  clear
+  708  git status
+  709  clear
+  710  cat .gitignore
+  711  ls
+  712  ls -a
+  713  echo "rec1" >> sample.txt
+  714  git status
+  715  echo "rec1" >> q1.class
+  716  git status
+  717  ls
+  718  echo "rec1" >> sample1.txt
+  719  git status
+  720  git add .
+  721  git commit -m "created sample.txt"
+  722  git status
+  723  git log
+  724  clear
+  725  ls
+  726  git log
+  727  cd ..
+  728  clear
+  729  mkdir samplerepo6
+  730  cd samplerepo6/
+  731  clear
+  732  git init
+  733  echo "rec1" >> f1.txt
+  734  git add .
+  735  git commit -m "CM1"
+  736  echo "rec1" >> f2.txt
+  737  git add .
+  738  git commit -m "CM2"
+  739  echo "rec1" >> f3.txt
+  740  git add .
+  741  git commit -m "CM3"
+  742  echo "rec1" >> f4.txt
+  743  git add .
+  744  git commit -m "CM4"
+  745  echo "rec1" >> f5.txt
+  746  git add .
+  747  git commit -m "CM5"
+  748  clear
+  749  git log --oneline
+  750  ls
+  751  git status
+  752  git ls-files
+  753  git reset --soft b422882
+  754  git status
+  755  ls
+  756  git ls-files
+  757  git log --oneline
+  758  git commit -m "CM5.1"
+  759  git status
+  760  ls
+  761  git ls-files
+  762  git log --oneline
+  763  git reset --mixed b422882
+  764  git status
+  765  ls
+  766  git ls-files
+  767  git log --oneline
+  768  git add .
+  769  git commit -m "CM5.2"
+  770  git log --oneline
+  771  git status
+  772  ls
+  773  git ls-files
+  774  git reset --hard b422882
+  775  git status
+  776  git ls-files
+  777  ls
+  778  git log --oneline
+  779  git reset --hard b7e46c7
+  780  ls
+  781  git log --oneline
+  782  git ls-files
+  783  clear
+  784  ls
+  785  echo "rec1" >> w1.txt
+  786  git add .
+  787  git commit -m "CM2"
+  788  echo "rec1" >> w2.txt
+  789  git add .
+  790  git commit -m "CM3"
+  791  echo "rec1" >> w3.txt
+  792  git add .
+  793  git commit -m "CM3"
+  794  clear
+  795  git log --oneline
+  796  git show 5f02ab2
+  797  git revert 5f02ab2
+  798  git status
+  799  git log --oneline
+  800  ls
+  801  git revert 1ef3b24
+  802  git log --oneline
+  803  ls
+  804  clear
+  805  git status
+  806  echo "rec1" >> l1.txt
+  807  git add .
+  808  git commit -m "asdfasdfasdfasasdfdfs"
+  809  git log --oneline
+  810  git commit -M "CR1023 - created l1.txt"
+  811  git commit -m "CR1023 - created l1.txt"
+  812  git log --oneline
+  813  git commit --amend -m "CR1023 - created l1.txt"
+  814  git log --oneline
+  815  cd ..
+  816  pwd
+  817  history
