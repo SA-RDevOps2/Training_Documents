@@ -1789,4 +1789,399 @@ GIT :::
 							Jenkins_Slave_node1		-- Build Server 
 				
 		
+			
 				
+
+*************************
+Day - 4 - 8th Oct. 2023
+*************************		
+				
+			Installation and Configuration of Jenkins Server.		https://www.jenkins.io/doc/book/installing/
+			
+				Create Virtual Machines/EC2 Instances	
+					Launch 2 VMs 
+						Jenkins_Master 				
+							Jenkins_Slave_node1		-- Build Server 
+							
+			
+			Linux : 
+			
+				Distributions
+				
+						Install/Manage any Software package in Linux, we need Package Manager -
+				
+				Ubuntu					- apt-get 	
+				
+				centos/RHEL				- yum 
+				Fedora(latest_version)	- dnf	
+				
+				
+				1 VM --> 750 hr/month 
+				
+				10 VMs --> 75 hr/month
+				
+				
+				Jenkins Service runs in port 8080
+							
+				Connect to VM ::
+				
+					Using - 
+						EC2 Instance Connect 
+						SSH Agents : MobaXterm : 
+							Remote Public_IP of host, User_Name(ubuntu), *.pem
+						Terminals/Command Prompt 
+						
+						
+				Connect to VM :
+
+sudo -i
+
+# Install Jdk :
+
+sudo apt update -y
+sudo apt install openjdk-11-jre -y
+java -version
+
+# Install Jenkins :
+
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins -y
+
+jenkins --version
+
+systemctl status jenkins
+systemctl start jenkins
+systemctl stop jenkins
+systemctl restart jenkins
+systemctl enable jenkins
+
+Login to Jenkins_Master :
+http://<public_IP_Addres>:8080/
+Eg.: 
+http://3.108.252.236:8080/
+
+
+
+
+
+		Create Jenkins Project ::
+		
+			Free Style Projects  
+			
+			Pipeline Projects/Jobs 
+			
+				Scripts using Groovy scripting Language.
+				
+					Scripted Pipeline 
+					
+					Declarative Pipeline
+					
+					
+			Create Jenkins Jobs 
+			Build 
+			Check the console output 
+			Troubleshooting Jobs 
+			
+			Handling Variables in Jenkins ::
+			
+				Jenkins - Environment Variables 
+				
+				User Defined Variables
+				
+			
+			Environments
+			
+			Non-Production																Production Environment
+			
+			DEV 
+			QA 
+			UAT 																			PROD Servers
+			
+		
+			Pipeline Projects/Jobs 
+			
+				Scripts using Groovy scripting Language.
+				
+					Scripted Pipeline 
+					
+					Declarative Pipeline
+					
+			Jenkins CI/CD - Automated Jobs/Pipeline/Project Creation 
+				Onboard Application Teams to Jenkins
+			
+			Master & Slave Nodes 
+			
+				Jenkins_Master 		==> Used to Create and Schedule the jobs/pipeline projects 
+				
+					Jenkins_Slave1	==> Used to perform the actual build.
+					
+				DevOps Approach:
+					Developers create the code & publish the latest src_code to GIT			==> Java Web Application 
+					
+					Using DevOps Automation:	
+						Build - Compile the source code & Create artifacts (Binaries - *.war)
+						Unit Test 
+						Promote the code to higher environment - QA Testing
+						Notify the Testing to pick up the application for further testing 
+						
+						
+			How to create Jenkins Slave Machines and config in Jenkins Master:
+			
+				Jenkins_Master 		==> VM - Used to Create and Schedule the jobs/pipeline projects
+					Jenkins_Slave1	==> VM - Used to perform the actual build.	
+									==> Tools :	git,jdk,maven https://maven.apache.org/install.html
+
+							How the applications are build ? 
+								Maven tool to build 
+								Parameters 
+								dependencies
+							
+							What are the Application Builds tool we can use?
+							How to config the build tool in the slave node?
+							
+							
+						install : MAVEN Build Tool 
+						Dependencies for build 
+						
+						
+						Maven Build Tool :::
+							pom.xml 	
+									==> This is used to define all the dependencies and plugins used to perform automated maven Application Build & Unit Testing.
+									
+							maven goals
+									==> Used to control the build or testing activities.
+									clean
+									test
+									package 
+									build 
+									install
+									
+							All these are part of Source Code Repository maintained by developers.
+							
+					
+Jenkins_Slave Node Configuration ::::					
+
+sudo -i
+sudo apt update -y
+
+# Install git :
+
+apt install git -y
+git --version 
+
+# Install jdk :
+
+sudo apt update -y
+sudo apt install openjdk-11-jre -y
+java -version
+
+# Install Maven :
+
+sudo apt update -y
+sudo apt install maven -y
+mvn --version 
+
+				Jenkins_Master 		==> VM - Used to Create and Schedule the jobs/pipeline projects
+					Jenkins_Slave1	==> VM - Used to perform the actual build.	
+									==> Tools :	git,jdk,maven https://maven.apache.org/install.html
+									
+									
+
+VM1 & VM2  ==> SSH Protocol 
+
+	SSH Connection is based upon Key based Authentication.
+	
+	User ID.
+	Host_name 
+	Authentication ::
+		Password 
+		Key 
+		Token 
+		Passwordless Auth 
+		
+		
+	Create Pipeline Projects :::
+	
+			Pipeline Projects/Jobs 
+			
+				Scripts using Groovy scripting Language.
+				
+					Scripted Pipeline 
+					
+					Declarative Pipeline
+					
+			Pipeline Projects :::
+			
+				Stages :::
+					Tasks 
+				
+				Checkout_Src_Code
+				Build 
+				Create Artifacts 
+		
+		
+		Maven Goal:
+			build 	-- It is jus to buid the applications Compile 
+			test    --> it will build and perform automated unit testing 
+			clean   --> Used to clean the target library/dir.
+			package --> Used to build, unit testing, create binaries in target folder
+
+
+pipeline {
+    
+	agent { label 'slave1' }
+
+    tools {
+        maven "maven-3.6.3"
+    }
+
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'Perform SCM Checkout'
+				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+        }
+        stage('Maven_Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn clean package'
+            }
+        }
+        stage('Deploy to QA_Server') {
+            steps {
+                echo 'Hello World'
+            }
+        }
+    }
+}
+
+10AM - 2PM from 14th Oct. 20023
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#*************************************************************************************************************
+#Jenkins Master :::
+#*************************************************************************************************************
+sudo -i 
+
+# Install Java :::
+
+sudo apt update
+sudo apt install openjdk-11-jre
+java -version
+
+
+# Install Jenkins :::
+
+
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+sudo apt-get install jenkins
+
+jenkins --version 
+
+
+systemctl status jenkins
+systemctl start jenkins
+systemctl restart jenkins
+systemctl stop jenkins
+systemctl enable jenkins
+
+	<public_ip_Address>:8080 
+
+#*************************************************************************************************************
+Configure Slave Node1 for Java Maven App. :
+#*************************************************************************************************************
+
+
+#Install GIT :
+
+sudo apt install git -y
+git --version
+
+#Install Java ::
+
+sudo apt update -y 
+sudo apt install openjdk-11-jre -y
+java -version
+
+
+Install Maven - Build Tool :
+https://maven.apache.org/install.html
+
+sudo apt install maven -y 
+
+mvn --version
+
+Create User in Jenkins Slave Machine & Create SSH Keys 
+
+	SSH Keys --> is composed of public and private keys 
+
+
+#Add User : 
+
+#useradd -m -d /home/devopsadmin devopsadmin
+#useradd devopsadmin
+
+useradd devopsadmin -s /bin/bash -m -d /home/devopsadmin
+
+su - devopsadmin
+
+#ssh-keygen
+
+#for Ubuntu ::
+ssh-keygen -t rsa -b 2048 -m PEM
+
+
+ls ~/.ssh 
+
+#You should see following two files:
+
+#id_rsa - private key
+#id_rsa.pub - public
+
+
+cat id_rsa.pub > authorized_keys
+
+chown -R devopsadmin /home/devopsadmin/.ssh
+chmod 600 /home/devopsadmin/.ssh/authorized_keys
+chmod 700 /home/devopsadmin/.ssh
+
+
+In Jenkins Master - Add Node Configuration
+		
+		Goto Manage Jenkins - Add New Node Configuration
+
+#**************************************************************************************************			
