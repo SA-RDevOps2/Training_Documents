@@ -2185,3 +2185,116 @@ In Jenkins Master - Add Node Configuration
 		Goto Manage Jenkins - Add New Node Configuration
 
 #**************************************************************************************************			
+
+
+*************************
+Day - 5 - 14th Oct. 2023
+*************************	
+
+
+pipeline {
+    
+	agent { label 'slave1' }
+
+    tools {
+        maven "maven-3.6.3"
+    }
+
+    stages {
+        stage('SCM_Checkout') {
+            steps {
+                echo 'Perform SCM Checkout'
+				git 'https://github.com/LoksaiETA/Java-mvn-app2.git'
+            }
+        }
+        stage('Maven_Build') {
+            steps {
+                echo 'Perform Maven Build'
+				sh 'mvn clean package'
+            }
+        }
+        stage('Deploy to QA_Server') {
+            steps {
+                script{
+				sshPublisher(publishers: [sshPublisherDesc(configName: 'SA_DR_QA_Server', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '.', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/mvn-hello-world.war')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+				}
+            }
+        }
+    }
+}
+
+
+	- Deployment 
+	- Automate the Deployment 
+	- Email_Notification
+	
+	1. Create QA Server - ubuntu & add port 8080
+	2. Install the tools :
+			jdk,tomcat
+			
+			
+	Target Environment :
+	
+		QA 	web Application Server(Software) - Tomcat(8080)/Nginx(80)
+			
+		UAT 
+		Prod 
+
+	Deployment ::::
+			--> It is just a process of copying the application artifacts from one server to another servers (Target servers)
+			
+			Source Path ::: 														Target_Path :::
+			Slave_Node:																QA_Server:
+			
+				target/mvn-hello-world.war					=====>						/opt/tomcat/webapps
+
+
+
+	Install Publish Over SSH Plugins in Jenkins and restart jenkins.
+
+
+Build Triggers :::
+
+	- Build Periodic 
+	
+		Eg.: 
+			clean-up the volume on daily basis 
+				schedule to run on daily basis 
+				schedule using crontab
+
+	- Poll SCM :
+	
+			It will trigger job based upon the schedule if there is any changes happened in src code repo.
+			
+			Test cycles :::
+				- 8am, 12pm, 3pm
+	
+	- Github webhook :
+			It will trigger the job as soon a commit happened in the src code repo.
+			It will trigger job for every commit in repo.
+			config webhook url in the repo.
+			
+			http://13.235.86.157:8080/github-webhook/
+	
+			http://3.108.59.111:8080/github-webhook/
+	
+
+	
+	- Email_Notification ::
+
+
+				- GMAIL LOGIN ID
+				- APP TOKEN
+
+					- login to gmail account 
+					- got account settings 
+					- Click Security Tab 
+					- Create 2 - way Auth with active mobile number 
+					- Search for App password 
+					- Enter the Name for App Password and click on Create. 
+					- This will Generate 16 bytes of App Password 
+
+	- Upgrade / Backup / Recovery :::
+	
+
+
