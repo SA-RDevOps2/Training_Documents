@@ -1,0 +1,76 @@
+*************************
+Day - 5 - 14th Oct. 2023
+*************************	
+
+IAC Tools :
+
+Fundamentals of Ansible and Terraform :::
+
+	IAC Tools ::
+	
+		- Infra-Structure As Code.
+		
+		How the server provision is done?
+		
+		How the Configurations are done in the servers?
+		
+		Testing :::
+		
+		Test servers are required only during the testing phase. 
+		
+		Infra-Structure Team == using some shell scripts or in-house tools 
+		
+	IAC Tools ::
+	
+		Server Provisioning 		--> Terraform is used for server provisioning/Creations
+		
+		Configuration Management 	--> Ansible to configure the servers - Install/Manage the packages.
+		
+		
+	Fundamentals of Ansible :::
+	
+		What is Ansible ?
+		
+			Ansible - Is a Configuration Management Tool - used to configure the servers - Install/Manage the packages.
+		Purpose/Usecase of Ansible ?
+		
+		Ansible Architecture - and its components.
+		
+			Inventory Files
+			
+			Modules 
+			
+			ansible.cfg
+			
+		Working with Ansible ::
+		
+			- Ansible Adhoc Commands
+			
+					[dev_servers] --> git --version 
+  
+			- Ansible Playbooks  --> To ensure reusability.
+			
+					Install Maven --> 
+			
+					[build_servers]
+
+							install git 
+							install jdk
+							install maven 
+							
+		Installation & Configuration of Ansible :::
+		
+			AWS ::
+			
+				Launch 3 VMs 
+				
+					1 - AC, 2 - Ansible Nodes
+		
+			
+			Authentication? using ssh keys.
+			
+			userid
+			auth ::
+			
+			key based auth. 
+			
