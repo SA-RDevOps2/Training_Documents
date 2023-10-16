@@ -1,0 +1,55 @@
+*************************
+Day - 6 - 15th Oct. 2023
+*************************				
+		
+		IAC Terraform :::
+		
+		Fundamentals of Terraform ::
+		
+		Provisioning / Configuration :
+		
+			Architecture 
+			Steps involved in Terraform.
+			
+			
+			
+			Create a QA_Server - Testing :::
+			
+			
+		
+		SCM_Checkout --> Appln. Build --> Create QA_Server --> Config QA_Server -->  Deploy to QA_server --> Test the Application
+		
+		
+		Steps Involved ::::
+		
+			- Identify the scope for Infra-Structure
+			- Write Script 
+			- terraform init 	--> Download the terraform provider
+			- terraform plan 	--> Review/validate the terraform config/script file
+			- terraform apply   --> Will implement the actual changes in target.
+			
+			
+			
+		Install Terraform ==> https://developer.hashicorp.com/terraform/downloads
+		
+		
+		windows ::::
+		
+		download the amd64 
+		extract
+		Create environment variable.
+		
+		Install Terraform.
+		Visual Studio Code - IDE 
+			Install - Terraform Extension for VSCode
+		
+		terminals 
+		
+		
+		Terraform is used to :::
+		
+			create/add			+
+			destroy/delete		-
+			change/update		~
+			
+			
