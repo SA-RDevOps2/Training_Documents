@@ -74,3 +74,43 @@ Fundamentals of Ansible and Terraform :::
 			
 			key based auth. 
 			
+			
+*************************
+Day - 6 - 15th Oct. 2023
+*************************				
+			
+			Ansible Modules :::
+			
+				The modules will be pushed into the target server 
+				Execute
+				Upon Execute, the module will be automatically remove from target server.
+				
+			Ansible Playbooks : written using *.yaml scripts.
+			
+			yaml --> key-value 
+			
+			Playbooks is used to execute the series of tasks.
+			Modules
+				fetch 
+				copy 
+				
+			Reusability ::::
+			
+				Handling Variables in Yaml files ::::
+				Roles ==> used to organise, reuse and share teh ansible components.
+				
+			Variables :::
+			
+				Using Default variables using ansible facts
+				
+				User Defined variables :::
+			
+					- Hardcoded in the playbook using vars key.
+					- Using External Variable files using vars_files key.
+					- Using Extra values using -e by parameterizing the playbook.
+					
+		
+			Register 
+			Handlers 
+			Loops 
+			Roles 
