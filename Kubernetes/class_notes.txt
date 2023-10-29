@@ -3021,6 +3021,59 @@ Day - 8 - 22nd Oct. 2023
 
 
 
+*************************
+Day - 9 - 28th Oct. 2023
+*************************
+
+					Deployment Controllers 
+					Services
+					Namespaces
+					
+				Deployment Controller Object ::: 
+					Is used to maintain the pods in its desired state.
+					It maintains the replicas 
+					It perform upgrade / rollback 
+					Scale up / Scale Down 
+					
+					
+					label & Selector ::
+					
+					
+						- create deployment object 
+						- create replicaset			==> Used to run a specific no. of pods at any point of time.
+						- pods 
+					
+					StrategyType:           RollingUpdate
+					
+					3 copies of pos ::
+					
+					p1,2,3  = 1.7.9  ==> 1.9.1
+					
+
+					webapp_v1.0.war ==> mywebapp:v1.0 ==> published to docker hub
+					webapp_v1.1.war ==> mywebapp:v1.1 ==> published to docker hub					
+					webapp_v1.2.war ==> mywebapp:v1.2 ==> published to docker hub
+					
+				Pod :: 
+				
+					- Create Pods 
+						
+							- Create the manifest file. (*.yaml)
+					
+					- working with kubectl CLI
+
+				Services ::::
+				
+					ClusterIP			==> 
+					NodePort			==> It is used to expose the pods to internet. 
+					LoadBalancer 
+					
+
+				Namespaces ::
+						Logical partitioning of Kubenetes_Cluster
+				QA, UAT, PRE-PROD		
+				
+				
 
 
 
